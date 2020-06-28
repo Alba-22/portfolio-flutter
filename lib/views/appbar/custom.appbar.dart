@@ -16,7 +16,7 @@ class CustomAppBar extends StatelessWidget {
     return Container(
       color: Theme.of(context).backgroundColor,
       child: Container(
-        margin: MediaQuery.of(context).size.width < 400
+        margin: MediaQuery.of(context).size.width <= 400
         ? EdgeInsets.all(0)
         : MediaQuery.of(context).size.width > 400 && MediaQuery.of(context).size.width < 600
         ? EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.1)
@@ -44,7 +44,7 @@ class CustomAppBar extends StatelessWidget {
               height: 60,
               child: Center(
                 child: AutoSizeText(
-                  "Sobre",
+                  "Projetos",
                   maxLines: 1,
                   style: style,
                 ),
@@ -54,7 +54,7 @@ class CustomAppBar extends StatelessWidget {
               height: 60,
               child: Center(
                 child: AutoSizeText(
-                  "Projetos",
+                  "Sobre",
                   maxLines: 1,
                   style: style,
                 ),

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -52,14 +53,16 @@ class HomeScreen extends StatelessWidget {
               margin: EdgeInsets.only(
                 left: MediaQuery.of(context).size.width * 0.05,
                 right: MediaQuery.of(context).size.width * 0.05,
-                top: 20
+                top: 30
               ),
-              child: Text(
-                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              child: AutoSizeText.rich(
+                TextSpan(
+                  text: "Atualmente me aprofundando nas complexidades de Flutter, buscando aprender mais sobre Design Patterns e Arquitetura no framework. Além disso, planejo também aprender back-end com NodeJS ou Python e aprender UI/UX para produzir melhores aplicações front-end",
+                ),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 18
+                  fontSize: 17
                 ),
               ),
             ),
