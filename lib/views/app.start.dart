@@ -4,7 +4,6 @@ import 'package:portfolio/views/appbar/custom.appbar.dart';
 import 'package:portfolio/views/bottom_nav_bar/bottom.nav.bar.dart';
 import 'package:portfolio/views/home/home.screen.dart';
 import 'package:portfolio/views/projects/projects.screen.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class AppStart extends StatefulWidget {
   @override

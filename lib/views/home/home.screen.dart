@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
               ),
               child: AutoSizeText.rich(
                 TextSpan(
-                  text: "Atualmente me aprofundando nas complexidades de Flutter, buscando aprender mais sobre Design Patterns e Arquitetura no framework. Além disso, planejo também aprender back-end com NodeJS ou Python e aprender UI/UX para produzir melhores aplicações front-end",
+                  text: "Atualmente me aprofundando nas complexidades de Flutter, buscando aprender mais sobre Design Patterns e Arquitetura no framework. Além disso, planejo também aprender back-end com NodeJS ou Python e aprender UI/UX para produzir melhores aplicações front-end.",
                 ),
                 textAlign: TextAlign.center,
                 style: TextStyle(

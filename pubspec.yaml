@@ -24,6 +24,8 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/bitsblockchain/
+    - assets/images/cooprata/
 
   fonts:
     - family: FiraCode
