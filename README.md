@@ -1,16 +1,16 @@
-# portfolio
+# Personal Website
 
-A new Flutter project.
+This personal website was made entirely with Flutter Web.
+In this repository you can found all Dart source code used.
+Final result in: https://alba-22.github.io
 
-## Getting Started
+This project features some basic stuff, with exhibition of some projects made and a bit of my experience.
 
-This project is a starting point for a Flutter application.
+#### Some Images
+![Initial page](assets/images/repository/home.png)
+![Porjects page](assets/images/repository/projects.png)
+![About page](assets/images/repository/about.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Used Plugins
+- [AutoSizeText](https://pub.dev/packages/auto_size_text): helps with some responsiveness and layout by automatically resizing text
+- [URL Launcher](https://pub.dev/packages/url_launcher): used to redirect user to other websites. In this case, to redirect user to Twitter, Github, LinkedIn or Google Play Store.
