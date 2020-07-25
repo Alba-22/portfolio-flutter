@@ -26,6 +26,8 @@ flutter:
     - assets/images/
     - assets/images/bitsblockchain/
     - assets/images/cooprata/
+    - assets/images/zenaide/
+    - assets/images/quarentify/
 
   fonts:
     - family: FiraCode

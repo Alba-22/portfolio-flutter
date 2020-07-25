@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class OpenedImageScreen extends StatelessWidget {
 
   final String image;
+  final String type;
 
-  const OpenedImageScreen({Key key, this.image}) : super(key: key);
+  const OpenedImageScreen({Key key, this.image, this.type = "height"}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,9 @@ class OpenedImageScreen extends StatelessWidget {
               image: AssetImage(
                 image
               ),
-              fit: BoxFit.fitHeight
+              fit: type == "height"
+              ? BoxFit.fitHeight
+              : BoxFit.fitWidth
             )
           ),
         ),

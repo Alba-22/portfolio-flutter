@@ -94,6 +94,7 @@ class ProjectDetailsScreen extends StatelessWidget {
                 return GestureDetector(
                   onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => OpenedImageScreen(
                     image: project.images[index],
+                    type: project.imagesType,
                   ))),
                   child: Container(
                     margin: EdgeInsets.only(top: 20, bottom: 5),
@@ -118,6 +119,18 @@ class ProjectDetailsScreen extends StatelessWidget {
                 height: 50,
                 child: Image.asset(
                   "assets/images/google-play-badge.png"
+                ),
+              ),
+            )
+            : Container(),
+            project.githubLink != null && project.githubLink != ""
+            ? GestureDetector(
+              onTap: () => urlLauncher(project.githubLink),
+              child: Container(
+                margin: EdgeInsets.symmetric(vertical: 10),
+                height: 50,
+                child: Image.asset(
+                  "assets/images/github-logo.png"
                 ),
               ),
             )
