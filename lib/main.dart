@@ -1,4 +1,7 @@
+import 'package:alba/app/core/utils/custom_colors.dart';
 import 'package:flutter/material.dart';
+
+import 'app/pages/home/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,9 +14,9 @@ class MyApp extends StatelessWidget {
       title: "Gustavo Alba",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xFFFF9640),
-        backgroundColor: Color(0xFF282036),
+        primarySwatch: CColors.primarySwatch,
       ),
+      home: HomePage(),
     );
   }
 }

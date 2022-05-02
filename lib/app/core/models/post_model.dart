@@ -1,6 +1,7 @@
 import 'dart:convert';
 
-class PostsModel {
+class PostModel {
+  final int id;
   final String title;
   final String description;
   final String origin;
@@ -8,7 +9,8 @@ class PostsModel {
   final String image;
   final String link;
 
-  PostsModel({
+  PostModel({
+    required this.id,
     required this.title,
     required this.description,
     required this.origin,
@@ -17,7 +19,8 @@ class PostsModel {
     required this.link,
   });
 
-  PostsModel copyWith({
+  PostModel copyWith({
+    int? id,
     String? title,
     String? description,
     String? origin,
@@ -25,7 +28,8 @@ class PostsModel {
     String? image,
     String? link,
   }) {
-    return PostsModel(
+    return PostModel(
+      id: id ?? this.id,
       title: title ?? this.title,
       description: description ?? this.description,
       origin: origin ?? this.origin,
@@ -37,6 +41,7 @@ class PostsModel {
 
   Map<String, dynamic> toMap() {
     return {
+      'id': id,
       'title': title,
       'description': description,
       'origin': origin,
@@ -46,8 +51,9 @@ class PostsModel {
     };
   }
 
-  factory PostsModel.fromMap(Map<String, dynamic> map) {
-    return PostsModel(
+  factory PostModel.fromMap(Map<String, dynamic> map) {
+    return PostModel(
+      id: map['id']?.toInt() ?? 0,
       title: map['title'] ?? '',
       description: map['description'] ?? '',
       origin: map['origin'] ?? '',
@@ -59,18 +65,19 @@ class PostsModel {
 
   String toJson() => json.encode(toMap());
 
-  factory PostsModel.fromJson(String source) => PostsModel.fromMap(json.decode(source));
+  factory PostModel.fromJson(String source) => PostModel.fromMap(json.decode(source));
 
   @override
   String toString() {
-    return 'PostsModel(title: $title, description: $description, origin: $origin, date: $date, image: $image, link: $link)';
+    return 'PostModel(id: $id, title: $title, description: $description, origin: $origin, date: $date, image: $image, link: $link)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is PostsModel &&
+    return other is PostModel &&
+        other.id == id &&
         other.title == title &&
         other.description == description &&
         other.origin == origin &&
@@ -81,6 +88,6 @@ class PostsModel {
 
   @override
   int get hashCode {
-    return title.hashCode ^ description.hashCode ^ origin.hashCode ^ date.hashCode ^ image.hashCode ^ link.hashCode;
+    return id.hashCode ^ title.hashCode ^ description.hashCode ^ origin.hashCode ^ date.hashCode ^ image.hashCode ^ link.hashCode;
   }
 }
