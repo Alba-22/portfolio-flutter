@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:alba/app/core/components/bio/bio_widget.dart';
 import 'package:alba/app/core/components/footer/footer_widget.dart';
 import 'package:alba/app/core/components/header/header_widget.dart';
-import 'package:alba/app/core/components/skills/skills_widget.dart';
 import 'package:alba/app/core/utils/responsive_widget.dart';
+
+import 'components/bio/bio_widget.dart';
+import 'components/skills/skills_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

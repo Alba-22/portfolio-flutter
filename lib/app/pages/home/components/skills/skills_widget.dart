@@ -1,7 +1,6 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:alba/app/core/components/layout/section_widget.dart';
 import 'package:flutter/material.dart';
 
+import 'package:alba/app/core/components/layout/section_widget.dart';
 import 'package:alba/app/core/models/tech.dart';
 
 import 'skill_item_widget.dart';
