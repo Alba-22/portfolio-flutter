@@ -25,8 +25,7 @@ class SkillItemWidget extends StatelessWidget {
           Expanded(
             child: SvgPicture.asset(
               svgPath,
-              width: 80,
-              // height: 80,
+              width: 100,
             ),
           ),
           const SizedBox(height: 10),

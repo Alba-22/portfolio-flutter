@@ -1,9 +1,9 @@
-import 'package:alba/app/core/components/skills/skills_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'package:alba/app/core/components/bio/bio_widget.dart';
+import 'package:alba/app/core/components/footer/footer_widget.dart';
 import 'package:alba/app/core/components/header/header_widget.dart';
-import 'package:alba/app/core/utils/custom_colors.dart';
+import 'package:alba/app/core/components/skills/skills_widget.dart';
 import 'package:alba/app/core/utils/responsive_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
                   width: 500,
                   child: BioWidget(),
                 ),
-                SizedBox(width: 50),
+                const SizedBox(width: 50),
                 Expanded(
                   child: SkillsWidget(
                     crossAxisCount: 4,
@@ -37,7 +37,10 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ],
-            )
+            ),
+            const SizedBox(height: 50),
+            FooterWidget(),
+            const SizedBox(height: 25),
           ],
         ),
         mobile: SingleChildScrollView(
@@ -53,7 +56,9 @@ class _HomePageState extends State<HomePage> {
                 crossAxisCount: 2,
                 mainAxisSpacing: 0,
               ),
-              const SizedBox(height: 60),
+              const SizedBox(height: 100),
+              FooterWidget(),
+              const SizedBox(height: 25),
             ],
           ),
         ),

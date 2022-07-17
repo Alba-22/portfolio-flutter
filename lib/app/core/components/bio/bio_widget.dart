@@ -49,7 +49,7 @@ class BioWidget extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           Text(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.",
+            "Desenvolvedor Mobile desde 2019, trabalhando principalmente com Flutter e liderando no planejamento, arquitetura, construção e publicação de diversas aplicações durante esse tempo. Tenho como principal foco a melhoria na arquitetura das aplicações que trabalho, criando projetos mais limpos, organizados e escaláveis.",
             textAlign: TextAlign.justify,
             style: GoogleFonts.inter(
               color: CColors.whiteGray,
