@@ -1,7 +1,9 @@
+import 'package:flutter/material.dart';
+
+import 'package:alba/app/core/components/bio/bio_widget.dart';
 import 'package:alba/app/core/components/header/header_widget.dart';
 import 'package:alba/app/core/utils/custom_colors.dart';
 import 'package:alba/app/core/utils/responsive_widget.dart';
-import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -21,6 +23,15 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               HeaderWidget(),
+              Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    child: BioWidget(),
+                  ),
+                  Expanded(child: Container()),
+                ],
+              )
             ],
           ),
         ),
@@ -30,6 +41,12 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               HeaderWidget(),
+              Row(
+                children: [
+                  Expanded(child: BioWidget()),
+                  SizedBox(width: 10),
+                ],
+              ),
             ],
           ),
         ),
