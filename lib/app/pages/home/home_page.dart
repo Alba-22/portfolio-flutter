@@ -5,6 +5,8 @@ import 'package:alba/app/core/components/header/header_widget.dart';
 import 'package:alba/app/core/utils/responsive_widget.dart';
 
 import 'components/bio/bio_widget.dart';
+import 'components/posts/desktop_posts_widget.dart';
+import 'components/posts/mobile_posts_widget.dart';
 import 'components/skills/skills_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,30 +21,35 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ResponsiveWidget(
-        desktop: Column(
-          children: [
-            HeaderWidget(),
-            const SizedBox(height: 60),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: 500,
-                  child: BioWidget(),
-                ),
-                const SizedBox(width: 50),
-                Expanded(
-                  child: SkillsWidget(
-                    crossAxisCount: 4,
-                    mainAxisSpacing: 50,
+        desktop: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              HeaderWidget(),
+              const SizedBox(height: 60),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: 500,
+                    child: BioWidget(),
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 50),
-            FooterWidget(),
-            const SizedBox(height: 25),
-          ],
+                  const SizedBox(width: 50),
+                  Expanded(
+                    child: SkillsWidget(
+                      crossAxisCount: 4,
+                      mainAxisSpacing: 50,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 50),
+              DesktopPostsWidget(),
+              const SizedBox(height: 50),
+              FooterWidget(),
+              const SizedBox(height: 25),
+            ],
+          ),
         ),
         mobile: SingleChildScrollView(
           child: Column(
@@ -50,14 +57,20 @@ class _HomePageState extends State<HomePage> {
               HeaderWidget(),
               const SizedBox(height: 20),
               Container(
+                padding: EdgeInsets.symmetric(horizontal: 30),
                 child: BioWidget(),
               ),
               const SizedBox(height: 60),
-              SkillsWidget(
-                crossAxisCount: 2,
-                mainAxisSpacing: 0,
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: SkillsWidget(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 50,
+                ),
               ),
               const SizedBox(height: 100),
+              MobilePostsWidget(),
+              const SizedBox(height: 50),
               FooterWidget(),
               const SizedBox(height: 25),
             ],

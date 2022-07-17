@@ -1,5 +1,7 @@
-import 'package:alba/app/core/utils/custom_colors.dart';
 import 'package:flutter/material.dart';
+
+import 'package:alba/app/core/utils/constants.dart';
+import 'package:alba/app/core/utils/custom_colors.dart';
 
 class ResponsiveWidget extends StatelessWidget {
   final Widget mobile;
@@ -11,32 +13,31 @@ class ResponsiveWidget extends StatelessWidget {
     required this.desktop,
   }) : super(key: key);
 
-  static bool isMobile(BuildContext context) => MediaQuery.of(context).size.width < 1100;
+  static bool isMobile(BuildContext context) => MediaQuery.of(context).size.width < Breakpoints.mobileDesktop;
 
-  static bool isDesktop(BuildContext context) => MediaQuery.of(context).size.width >= 1100;
+  static bool isDesktop(BuildContext context) => MediaQuery.of(context).size.width >= Breakpoints.mobileDesktop;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        // If our width is more than 1100 then we consider it a desktop
-        if (constraints.maxWidth >= 1100) {
+        if (constraints.maxWidth >= Breakpoints.mobileDesktop) {
           return Container(
-            color: CColors.blackBackground,
+            decoration: BoxDecoration(
+              gradient: CColors.backgroundGradient,
+            ),
             child: Center(
-              child: Container(
-                color: CColors.blackBackground,
-                width: 1100,
+              child: SizedBox(
+                width: Breakpoints.mobileDesktop,
                 child: desktop,
               ),
             ),
           );
-        }
-        // Or less then that we called it mobile
-        else {
+        } else {
           return Container(
-            color: CColors.blackBackground,
-            padding: EdgeInsets.symmetric(horizontal: 30),
+            decoration: BoxDecoration(
+              gradient: CColors.backgroundGradient,
+            ),
             width: MediaQuery.of(context).size.width,
             child: mobile,
           );

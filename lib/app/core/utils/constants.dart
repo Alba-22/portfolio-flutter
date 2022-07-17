@@ -18,3 +18,7 @@ abstract class FWeight {
   static const FontWeight extraBold = FontWeight.w800;
   static const FontWeight black = FontWeight.w900;
 }
+
+abstract class Breakpoints {
+  static const double mobileDesktop = 1100;
+}
