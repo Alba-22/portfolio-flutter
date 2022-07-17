@@ -14,9 +14,6 @@ class BioWidget extends StatelessWidget {
         vertical: 50,
         horizontal: 30,
       ),
-      margin: EdgeInsets.only(
-        right: 10,
-      ),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
@@ -28,7 +25,7 @@ class BioWidget extends StatelessWidget {
         ),
         borderRadius: BorderRadius.only(
           bottomRight: Radius.circular(38),
-          topRight: Radius.circular(38),
+          bottomLeft: Radius.circular(38),
         ),
       ),
       child: Column(
@@ -53,6 +50,7 @@ class BioWidget extends StatelessWidget {
           const SizedBox(height: 30),
           Text(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.Curabitur tempus urna at turpis condimentum lobortis.",
+            textAlign: TextAlign.justify,
             style: GoogleFonts.inter(
               color: CColors.whiteGray,
               fontSize: 16,

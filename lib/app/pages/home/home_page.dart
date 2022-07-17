@@ -1,3 +1,4 @@
+import 'package:alba/app/core/components/skills/skills_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'package:alba/app/core/components/bio/bio_widget.dart';
@@ -17,36 +18,42 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ResponsiveWidget(
-        desktop: Container(
-          color: CColors.blackBackground,
-          width: MediaQuery.of(context).size.width,
-          child: Column(
-            children: [
-              HeaderWidget(),
-              Row(
-                children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    child: BioWidget(),
+        desktop: Column(
+          children: [
+            HeaderWidget(),
+            const SizedBox(height: 60),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: 500,
+                  child: BioWidget(),
+                ),
+                SizedBox(width: 50),
+                Expanded(
+                  child: SkillsWidget(
+                    crossAxisCount: 4,
+                    mainAxisSpacing: 50,
                   ),
-                  Expanded(child: Container()),
-                ],
-              )
-            ],
-          ),
+                ),
+              ],
+            )
+          ],
         ),
-        mobile: Container(
-          color: CColors.blackBackground,
-          width: MediaQuery.of(context).size.width,
+        mobile: SingleChildScrollView(
           child: Column(
             children: [
               HeaderWidget(),
-              Row(
-                children: [
-                  Expanded(child: BioWidget()),
-                  SizedBox(width: 10),
-                ],
+              const SizedBox(height: 20),
+              Container(
+                child: BioWidget(),
               ),
+              const SizedBox(height: 60),
+              SkillsWidget(
+                crossAxisCount: 2,
+                mainAxisSpacing: 0,
+              ),
+              const SizedBox(height: 60),
             ],
           ),
         ),
