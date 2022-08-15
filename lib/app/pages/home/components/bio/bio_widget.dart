@@ -17,13 +17,13 @@ class BioWidget extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color(0xFF7A401F).withOpacity(0.5),
-            Color(0xFF121212).withOpacity(0.5),
+            const Color(0xFF7A401F).withOpacity(0.5),
+            const Color(0xFF121212).withOpacity(0.5),
           ],
           begin: Alignment.bottomCenter,
           end: Alignment.topCenter,
         ),
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           bottomRight: Radius.circular(38),
           bottomLeft: Radius.circular(38),
         ),

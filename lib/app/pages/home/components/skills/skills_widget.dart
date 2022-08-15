@@ -21,7 +21,7 @@ class SkillsWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        SectionWidget(
+        const SectionWidget(
           title: "SKILLS",
           subtitle: "Algumas tecnologias e ferramentas que venho usando no meu dia a dia nos últimos anos.",
         ),

@@ -23,7 +23,7 @@ class ResponsiveWidget extends StatelessWidget {
       builder: (context, constraints) {
         if (constraints.maxWidth >= Breakpoints.mobileDesktop) {
           return Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: CColors.backgroundGradient,
             ),
             child: Center(
@@ -35,7 +35,7 @@ class ResponsiveWidget extends StatelessWidget {
           );
         } else {
           return Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: CColors.backgroundGradient,
             ),
             width: MediaQuery.of(context).size.width,

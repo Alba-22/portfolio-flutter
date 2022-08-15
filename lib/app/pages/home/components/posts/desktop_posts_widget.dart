@@ -12,7 +12,7 @@ class DesktopPostsWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SectionWidget(
+        const SectionWidget(
           title: "POSTS",
           subtitle: "Alguns aprendizados que resolvo escrever e publicar para ajudar os outros.",
         ),

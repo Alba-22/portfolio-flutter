@@ -21,14 +21,14 @@ class PostItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 400,
       width: 320,
       child: Column(
         children: [
           Expanded(
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: CColors.whiteGray,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(8),
@@ -38,8 +38,8 @@ class PostItemWidget extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(20),
-            decoration: BoxDecoration(
+            padding: const EdgeInsets.all(20),
+            decoration: const BoxDecoration(
               color: CColors.almostWhite,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(8),
@@ -61,7 +61,7 @@ class PostItemWidget extends StatelessWidget {
                   description,
                   style: GoogleFonts.inter(
                     fontSize: 16,
-                    color: Color(0xFF363636),
+                    color: const Color(0xFF363636),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -77,7 +77,7 @@ class PostItemWidget extends StatelessWidget {
                       formatDate(publicationDate),
                       style: GoogleFonts.inter(
                         fontSize: 16,
-                        color: Color(0xFF5E5E5E),
+                        color: const Color(0xFF5E5E5E),
                       ),
                     ),
                   ],

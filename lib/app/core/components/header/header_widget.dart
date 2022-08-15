@@ -11,16 +11,16 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 30),
+      margin: const EdgeInsets.symmetric(horizontal: 30),
       child: Column(
         children: [
-          SizedBox(height: 35),
+          const SizedBox(height: 35),
           Row(
             children: [
               Expanded(
                 child: Row(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 44,
                       width: 44,
                       child: Stack(
@@ -50,7 +50,7 @@ class HeaderWidget extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(width: 8),
+                    const SizedBox(width: 8),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,7 +78,7 @@ class HeaderWidget extends StatelessWidget {
                 ),
               ),
               Row(
-                children: [
+                children: const [
                   SocialMediaWidget(
                     image: "icons/social/linkedin_icon.svg",
                     urlToLaunch: RedirectLinks.linkedin,

@@ -25,18 +25,18 @@ class _HomePageState extends State<HomePage> {
         desktop: SingleChildScrollView(
           child: Column(
             children: [
-              HeaderWidget(),
+              const HeaderWidget(),
               const SizedBox(height: 60),
-              ProjectsWidget(),
+              const ProjectsWidget(),
               const SizedBox(height: 60),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   SizedBox(
                     width: 500,
                     child: BioWidget(),
                   ),
-                  const SizedBox(width: 50),
+                  SizedBox(width: 50),
                   Expanded(
                     child: SkillsWidget(
                       crossAxisCount: 4,
@@ -46,9 +46,9 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               const SizedBox(height: 50),
-              DesktopPostsWidget(),
+              const DesktopPostsWidget(),
               const SizedBox(height: 50),
-              FooterWidget(),
+              const FooterWidget(),
               const SizedBox(height: 25),
             ],
           ),
@@ -56,29 +56,29 @@ class _HomePageState extends State<HomePage> {
         mobile: SingleChildScrollView(
           child: Column(
             children: [
-              HeaderWidget(),
+              const HeaderWidget(),
               const SizedBox(height: 20),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 30),
-                child: ProjectsWidget(),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: const ProjectsWidget(),
               ),
               const SizedBox(height: 20),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 30),
-                child: BioWidget(),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: const BioWidget(),
               ),
               const SizedBox(height: 60),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 30),
-                child: SkillsWidget(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: const SkillsWidget(
                   crossAxisCount: 2,
                   mainAxisSpacing: 50,
                 ),
               ),
               const SizedBox(height: 100),
-              MobilePostsWidget(),
+              const MobilePostsWidget(),
               const SizedBox(height: 50),
-              FooterWidget(),
+              const FooterWidget(),
               const SizedBox(height: 25),
             ],
           ),

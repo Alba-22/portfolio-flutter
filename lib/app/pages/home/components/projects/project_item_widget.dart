@@ -30,76 +30,74 @@ class ProjectItemWidget extends StatelessWidget {
             launchUrlString(redirectLink!);
           }
         },
-        child: Container(
-          child: Stack(
-            children: [
-              imagePath.isNotEmpty
-                  ? Stack(
-                      children: [
-                        Center(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Image.asset(
-                              imagePath,
-                              height: 650,
-                              width: double.infinity,
-                              fit: BoxFit.cover,
-                            ),
+        child: Stack(
+          children: [
+            imagePath.isNotEmpty
+                ? Stack(
+                    children: [
+                      Center(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            imagePath,
+                            height: 650,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
                           ),
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Colors.transparent,
-                                Color(0xFF0D1824),
-                              ],
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
-                  : Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFF0D1824),
-                        borderRadius: BorderRadius.circular(20),
                       ),
+                      Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.transparent,
+                              Color(0xFF0D1824),
+                            ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                : Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF0D1824),
+                      borderRadius: BorderRadius.circular(20),
                     ),
-              Container(
-                padding: EdgeInsets.all(22),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    SectionWidget(
-                      title: title,
-                      subtitle: subtitle,
-                    ),
-                    // TODO: decidir se vai ter isso ou não
-                    // const SizedBox(height: 16),
-                    // SizedBox(
-                    //   height: 32,
-                    //   child: ListView.separated(
-                    //     scrollDirection: Axis.horizontal,
-                    //     itemCount: techs.length,
-                    //     itemBuilder: (BuildContext context, int index) {
-                    //       return SvgPicture.asset(
-                    //         techs[index].iconPath,
-                    //         height: 32,
-                    //       );
-                    //     },
-                    //     separatorBuilder: (BuildContext context, int index) {
-                    //       return const SizedBox(width: 16);
-                    //     },
-                    //   ),
-                    // ),
-                  ],
-                ),
+                  ),
+            Container(
+              padding: const EdgeInsets.all(22),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SectionWidget(
+                    title: title,
+                    subtitle: subtitle,
+                  ),
+                  // TODO: decidir se vai ter isso ou não
+                  // const SizedBox(height: 16),
+                  // SizedBox(
+                  //   height: 32,
+                  //   child: ListView.separated(
+                  //     scrollDirection: Axis.horizontal,
+                  //     itemCount: techs.length,
+                  //     itemBuilder: (BuildContext context, int index) {
+                  //       return SvgPicture.asset(
+                  //         techs[index].iconPath,
+                  //         height: 32,
+                  //       );
+                  //     },
+                  //     separatorBuilder: (BuildContext context, int index) {
+                  //       return const SizedBox(width: 16);
+                  //     },
+                  //   ),
+                  // ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

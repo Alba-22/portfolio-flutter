@@ -13,8 +13,8 @@ class MobilePostsWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 30),
-          child: SectionWidget(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: const SectionWidget(
             title: "POSTS",
             subtitle: "Alguns aprendizados que resolvo escrever e publicar para ajudar os outros.",
           ),
