@@ -80,22 +80,22 @@ class HeaderWidget extends StatelessWidget {
               Row(
                 children: [
                   SocialMediaWidget(
-                    image: "images/linkedin_icon.svg",
+                    image: "icons/social/linkedin_icon.svg",
                     urlToLaunch: RedirectLinks.linkedin,
                   ),
                   SizedBox(width: 12),
                   SocialMediaWidget(
-                    image: "images/github_icon.svg",
+                    image: "icons/social/github_icon.svg",
                     urlToLaunch: RedirectLinks.github,
                   ),
                   SizedBox(width: 12),
                   SocialMediaWidget(
-                    image: "images/twitter_icon.svg",
+                    image: "icons/social/twitter_icon.svg",
                     urlToLaunch: RedirectLinks.twitter,
                   ),
                   SizedBox(width: 12),
                   SocialMediaWidget(
-                    image: "images/discord_icon.svg",
+                    image: "icons/social/discord_icon.svg",
                     urlToLaunch: RedirectLinks.discord,
                   ),
                 ],
