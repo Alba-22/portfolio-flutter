@@ -40,6 +40,7 @@ class SectionWidget extends StatelessWidget {
         if (subtitle != null)
           Text(
             subtitle!,
+            textAlign: TextAlign.justify,
             style: GoogleFonts.inter(
               color: CColors.whiteGray,
               fontSize: 18,

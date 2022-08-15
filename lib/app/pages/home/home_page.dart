@@ -7,6 +7,7 @@ import 'package:alba/app/core/utils/responsive_widget.dart';
 import 'components/bio/bio_widget.dart';
 import 'components/posts/desktop_posts_widget.dart';
 import 'components/posts/mobile_posts_widget.dart';
+import 'components/projects/projects_widget.dart';
 import 'components/skills/skills_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,9 +24,10 @@ class _HomePageState extends State<HomePage> {
       body: ResponsiveWidget(
         desktop: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               HeaderWidget(),
+              const SizedBox(height: 60),
+              ProjectsWidget(),
               const SizedBox(height: 60),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,6 +57,11 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               HeaderWidget(),
+              const SizedBox(height: 20),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: ProjectsWidget(),
+              ),
               const SizedBox(height: 20),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 30),
