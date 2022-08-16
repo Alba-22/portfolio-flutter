@@ -5,8 +5,6 @@ import 'package:alba/app/core/components/header/header_widget.dart';
 import 'package:alba/app/core/utils/responsive_widget.dart';
 
 import 'components/bio/bio_widget.dart';
-import 'components/posts/desktop_posts_widget.dart';
-import 'components/posts/mobile_posts_widget.dart';
 import 'components/projects/projects_widget.dart';
 import 'components/skills/skills_widget.dart';
 
