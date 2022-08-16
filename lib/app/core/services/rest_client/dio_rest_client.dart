@@ -6,7 +6,7 @@ import 'models/rest_client_response.dart';
 
 class DioRestClient implements RestClientService {
   final String _baseURL;
-  late Dio _dio;
+  late final Dio _dio;
   late BaseOptions _baseOptions;
 
   DioRestClient(this._baseURL, this._dio) {

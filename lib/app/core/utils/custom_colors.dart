@@ -6,10 +6,12 @@ abstract class CColors {
   static const Color almostWhite = Color(0xFFFFFEFB);
   static const Color almostBlack = Color(0xFF1E0C00);
   static const Color blackBackground = Color(0xFF121212);
+  static const Color whiteGray = Color(0xFFECECEC);
 
-  static const endPageGradient = LinearGradient(
+  static const backgroundGradient = LinearGradient(
     colors: [
-      Color(0xFF0F0F0F),
+      Color(0xFF121212),
+      Color(0xFF121212),
       Color(0xFF0D1924),
     ],
     begin: Alignment.topCenter,

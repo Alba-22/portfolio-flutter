@@ -11,16 +11,16 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 30),
+      margin: const EdgeInsets.symmetric(horizontal: 30),
       child: Column(
         children: [
-          SizedBox(height: 35),
+          const SizedBox(height: 35),
           Row(
             children: [
               Expanded(
                 child: Row(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 44,
                       width: 44,
                       child: Stack(
@@ -28,7 +28,7 @@ class HeaderWidget extends StatelessWidget {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(40),
                             child: Image.asset(
-                              "images/profile_photo.jpeg",
+                              "assets/images/profile_photo.jpeg",
                             ),
                           ),
                           Positioned(
@@ -50,7 +50,7 @@ class HeaderWidget extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(width: 8),
+                    const SizedBox(width: 8),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,24 +78,24 @@ class HeaderWidget extends StatelessWidget {
                 ),
               ),
               Row(
-                children: [
+                children: const [
                   SocialMediaWidget(
-                    image: "images/linkedin_icon.svg",
+                    image: "assets/icons/social/linkedin_icon.svg",
                     urlToLaunch: RedirectLinks.linkedin,
                   ),
                   SizedBox(width: 12),
                   SocialMediaWidget(
-                    image: "images/github_icon.svg",
+                    image: "assets/icons/social/github_icon.svg",
                     urlToLaunch: RedirectLinks.github,
                   ),
                   SizedBox(width: 12),
                   SocialMediaWidget(
-                    image: "images/twitter_icon.svg",
+                    image: "assets/icons/social/twitter_icon.svg",
                     urlToLaunch: RedirectLinks.twitter,
                   ),
                   SizedBox(width: 12),
                   SocialMediaWidget(
-                    image: "images/discord_icon.svg",
+                    image: "assets/icons/social/discord_icon.svg",
                     urlToLaunch: RedirectLinks.discord,
                   ),
                 ],

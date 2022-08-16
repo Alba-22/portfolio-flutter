@@ -6,9 +6,11 @@ publish_to: "none"
 version: 2.0.0+1
 
 environment:
-  sdk: ">=2.16.1 <3.0.0"
+  sdk: ">=2.17.1 <3.0.0"
+  flutter: ^3.0.0
 
 dependencies:
+  carousel_slider: ^4.1.1
   dio: ^4.0.6
   flutter:
     sdk: flutter
@@ -18,6 +20,7 @@ dependencies:
   url_launcher: ^6.1.5
 
 dev_dependencies:
+  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
 
@@ -25,4 +28,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
+    - assets/icons/social/
+    - assets/icons/techs/
+    - assets/images/
+    - assets/images/projects/
+    - assets/info/
