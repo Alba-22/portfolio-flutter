@@ -28,7 +28,7 @@ class HeaderWidget extends StatelessWidget {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(40),
                             child: Image.asset(
-                              "images/profile_photo.jpeg",
+                              "assets/images/profile_photo.jpeg",
                             ),
                           ),
                           Positioned(
@@ -80,22 +80,22 @@ class HeaderWidget extends StatelessWidget {
               Row(
                 children: const [
                   SocialMediaWidget(
-                    image: "icons/social/linkedin_icon.svg",
+                    image: "assets/icons/social/linkedin_icon.svg",
                     urlToLaunch: RedirectLinks.linkedin,
                   ),
                   SizedBox(width: 12),
                   SocialMediaWidget(
-                    image: "icons/social/github_icon.svg",
+                    image: "assets/icons/social/github_icon.svg",
                     urlToLaunch: RedirectLinks.github,
                   ),
                   SizedBox(width: 12),
                   SocialMediaWidget(
-                    image: "icons/social/twitter_icon.svg",
+                    image: "assets/icons/social/twitter_icon.svg",
                     urlToLaunch: RedirectLinks.twitter,
                   ),
                   SizedBox(width: 12),
                   SocialMediaWidget(
-                    image: "icons/social/discord_icon.svg",
+                    image: "assets/icons/social/discord_icon.svg",
                     urlToLaunch: RedirectLinks.discord,
                   ),
                 ],

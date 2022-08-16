@@ -1,12 +1,12 @@
 enum Tech {
-  flutter("Flutter", "icons/techs/flutter.svg"),
-  dart("Dart", "icons/techs/dart.svg"),
-  xcode("XCode", "icons/techs/xcode.svg"),
-  appstore("AppStore", "icons/techs/appstore.svg"),
-  playstore("PlayStore", "icons/techs/playstore.svg"),
-  git("Git", "icons/techs/git.svg"),
-  figma("Figma", "icons/techs/figma.svg"),
-  firebase("Firebase", "icons/techs/firebase.svg");
+  flutter("Flutter", "assets/icons/techs/flutter.svg"),
+  dart("Dart", "assets/icons/techs/dart.svg"),
+  xcode("XCode", "assets/icons/techs/xcode.svg"),
+  appstore("AppStore", "assets/icons/techs/appstore.svg"),
+  playstore("PlayStore", "assets/icons/techs/playstore.svg"),
+  git("Git", "assets/icons/techs/git.svg"),
+  figma("Figma", "assets/icons/techs/figma.svg"),
+  firebase("Firebase", "assets/icons/techs/firebase.svg");
 
   final String renderName;
   final String iconPath;
