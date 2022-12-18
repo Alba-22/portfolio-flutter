@@ -10,9 +10,8 @@ abstract class CColors {
 
   static const backgroundGradient = LinearGradient(
     colors: [
-      Color(0xFF121212),
-      Color(0xFF121212),
-      Color(0xFF0D1924),
+      Color(0xFF0F0F0F),
+      Color(0xFF070D1D),
     ],
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
