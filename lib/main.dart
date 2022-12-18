@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:alba/app/core/utils/custom_colors.dart';
 import 'package:alba/app/core/utils/custom_scroll_behavior.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 import 'app/pages/home/home_page.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const Portifolio());
 }
 
