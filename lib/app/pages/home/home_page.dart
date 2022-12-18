@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
             ClipRRect(
               borderRadius: BorderRadius.circular(1000),
               child: Image.asset(
-                "images/profile_photo.jpeg",
+                "assets/images/profile_photo.jpeg",
                 height: 200,
               ),
             ),
