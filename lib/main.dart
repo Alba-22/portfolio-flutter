@@ -9,11 +9,11 @@ import 'app/pages/home/home_page.dart';
 
 void main() {
   setPathUrlStrategy();
-  runApp(const Portifolio());
+  runApp(const Website());
 }
 
-class Portifolio extends StatelessWidget {
-  const Portifolio({Key? key}) : super(key: key);
+class Website extends StatelessWidget {
+  const Website({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
