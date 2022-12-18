@@ -29,7 +29,4 @@ flutter:
 
   assets:
     - assets/icons/social/
-    - assets/icons/techs/
     - assets/images/
-    - assets/images/projects/
-    - assets/info/
