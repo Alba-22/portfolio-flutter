@@ -1,0 +1,30 @@
+{
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  "search.exclude": {
+    "**/.fvm": true
+  },
+  "files.watcherExclude": {
+    "**/.fvm": true
+  },
+  "dart.lineLength": 100,
+  "[dart]": {
+    "editor.rulers": [100],
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "editor.tabSize": 2,
+  "editor.bracketPairColorization.enabled": true,
+  "files.exclude": {
+    "**/*.g.dart": true,
+    "**/*.iml": true,
+    "**/*.metadata": true,
+    "**/*.mocks.dart": true,
+    "**/*.packages": true,
+    "**/*desktop.ini": true,
+    ".flutter-plugins": true,
+    ".flutter-plugins-dependencies": true
+  }
+}

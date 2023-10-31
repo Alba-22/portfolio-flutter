@@ -2,16 +2,14 @@ import 'package:alba/app/core/components/app_bar.dart';
 import 'package:alba/app/core/utils/responsive_widget.dart';
 import 'package:flutter/material.dart';
 
-import 'components/home_brief_widget.dart';
-
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class ProjectsPage extends StatefulWidget {
+  const ProjectsPage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<ProjectsPage> createState() => _ProjectsPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _ProjectsPageState extends State<ProjectsPage> {
   @override
   Widget build(BuildContext context) {
     return ResponsiveWidget(
@@ -21,7 +19,6 @@ class _HomePageState extends State<HomePage> {
           SizedBox(height: 24),
           CustomAppBar(),
           SizedBox(height: 48),
-          DesktopHomeBriefWidget(),
         ],
       ),
     );

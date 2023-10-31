@@ -1,34 +1,58 @@
 import 'package:flutter/material.dart';
 
-abstract class CColors {
-  static const Color primary = Color(0xFFFF6700);
-  static MaterialColor get primarySwatch => _getMaterialColor(primary);
-  static const Color almostWhite = Color(0xFFFFFEFB);
-  static const Color almostBlack = Color(0xFF1E0C00);
-  static const Color blackBackground = Color(0xFF121212);
-  static const Color whiteGray = Color(0xFFECECEC);
+class CustomColors extends ThemeExtension<CustomColors> {
+  final Color main;
+  final Color primaryText;
+  final Color secondaryText;
+  final Color background;
+  final Color cardBackground;
+  final Color border;
 
-  static const backgroundGradient = LinearGradient(
-    colors: [
-      Color(0xFF0F0F0F),
-      Color(0xFF070D1D),
-    ],
-    begin: Alignment.topCenter,
-    end: Alignment.bottomCenter,
-  );
-}
-
-MaterialColor _getMaterialColor(Color color) {
-  return MaterialColor(color.value, {
-    50: Color.fromRGBO(color.red, color.blue, color.green, 0.1),
-    100: Color.fromRGBO(color.red, color.blue, color.green, 0.2),
-    200: Color.fromRGBO(color.red, color.blue, color.green, 0.3),
-    300: Color.fromRGBO(color.red, color.blue, color.green, 0.4),
-    400: Color.fromRGBO(color.red, color.blue, color.green, 0.5),
-    500: Color.fromRGBO(color.red, color.blue, color.green, 0.6),
-    600: Color.fromRGBO(color.red, color.blue, color.green, 0.7),
-    700: Color.fromRGBO(color.red, color.blue, color.green, 0.8),
-    800: Color.fromRGBO(color.red, color.blue, color.green, 0.9),
-    900: Color.fromRGBO(color.red, color.blue, color.green, 1),
+  const CustomColors({
+    required this.main,
+    required this.primaryText,
+    required this.secondaryText,
+    required this.background,
+    required this.cardBackground,
+    required this.border,
   });
+
+  @override
+  CustomColors lerp(CustomColors? other, double t) {
+    if (other is! CustomColors) {
+      return this;
+    }
+    return CustomColors(
+      main: Color.lerp(main, other.main, t) ?? main,
+      primaryText: Color.lerp(primaryText, other.primaryText, t) ?? primaryText,
+      secondaryText: Color.lerp(secondaryText, other.secondaryText, t) ?? secondaryText,
+      background: Color.lerp(background, other.background, t) ?? background,
+      cardBackground: Color.lerp(cardBackground, other.cardBackground, t) ?? cardBackground,
+      border: Color.lerp(border, other.border, t) ?? border,
+    );
+  }
+
+  @override
+  CustomColors copyWith({
+    Color? main,
+    Color? primaryText,
+    Color? secondaryText,
+    Color? background,
+    Color? cardBackground,
+    Color? border,
+  }) {
+    return CustomColors(
+      main: main ?? this.main,
+      primaryText: primaryText ?? this.primaryText,
+      secondaryText: secondaryText ?? this.secondaryText,
+      background: background ?? this.background,
+      cardBackground: cardBackground ?? this.cardBackground,
+      border: border ?? this.border,
+    );
+  }
+
+  @override
+  String toString() {
+    return 'CustomColors(main: $main, primaryText: $primaryText, secondaryText: $secondaryText, background: $background, cardBackground: $cardBackground, border: $border)';
+  }
 }
